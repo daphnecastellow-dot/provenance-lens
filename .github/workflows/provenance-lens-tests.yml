@@ -1,0 +1,33 @@
+name: Provenance Lens tests
+
+on:
+  push:
+    paths:
+      - "provenance_lens.py"
+      - "pyproject.toml"
+      - "tests/**"
+      - "examples/**"
+      - ".github/workflows/provenance-lens-tests.yml"
+  pull_request:
+    paths:
+      - "provenance_lens.py"
+      - "pyproject.toml"
+      - "tests/**"
+      - "examples/**"
+      - ".github/workflows/provenance-lens-tests.yml"
+
+permissions:
+  contents: read
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - name: Run tests
+        run: python -m unittest discover -s tests -v
+      - name: Validate example
+        run: python provenance_lens.py check examples/demo.json
