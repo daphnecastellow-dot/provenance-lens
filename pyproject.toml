@@ -1,0 +1,15 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "provenance-lens"
+version = "0.1.0"
+description = "Inspect finished claims and writing for visible provenance bridges."
+requires-python = ">=3.10"
+
+[project.scripts]
+provenance-lens = "provenance_lens:main"
+
+[tool.setuptools]
+py-modules = ["provenance_lens"]
