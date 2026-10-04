@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Inspect finished writing without collapsing support, synthesis, and inference."""
+"""Inspect finished writing without collapsing support, synthesis, and inference.\n\nVisible provenance gaps remain explicit instead of being silently repaired.\n"""
 
 from __future__ import annotations
 
