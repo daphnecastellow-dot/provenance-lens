@@ -1,0 +1,56 @@
+{
+  "format": "provenance-lens/0.1",
+  "title": "North Reach warning-note paragraph",
+  "passage": "The warning note is absent from the checked 1904 station log but appears in a 1978 folklore book. The current source set therefore places its first recorded appearance later, which may indicate that the detail entered the tradition after the original event. The later author must have invented it.",
+  "created_at": "2026-10-04T21:30:00Z",
+  "sources": [
+    {"id":"S001","label":"1904 station log","kind":"primary","date":"1904","url":"","note":"Fictional demonstration source."},
+    {"id":"S002","label":"1978 folklore book","kind":"later-retelling","date":"1978","url":"","note":"Fictional demonstration source."}
+  ],
+  "evidence": [
+    {"id":"E001","text":"The checked 1904 station log contains no warning note.","sources":["S001"],"note":""},
+    {"id":"E002","text":"The 1978 folklore book includes the warning-note story.","sources":["S002"],"note":""}
+  ],
+  "units": [
+    {
+      "id":"U001",
+      "text":"The warning note is absent from the checked 1904 station log.",
+      "kind":"direct-support",
+      "evidence":["E001"],
+      "basis_units":[],
+      "reason":"The sentence stays within what the checked document directly shows."
+    },
+    {
+      "id":"U002",
+      "text":"The warning note appears in a 1978 folklore book.",
+      "kind":"direct-support",
+      "evidence":["E002"],
+      "basis_units":[],
+      "reason":"The sentence reports the recorded content of the later source."
+    },
+    {
+      "id":"U003",
+      "text":"The current source set therefore places its first recorded appearance later.",
+      "kind":"synthesis",
+      "evidence":[],
+      "basis_units":["U001","U002"],
+      "reason":"This combines the two recorded source states without claiming a universal historical origin."
+    },
+    {
+      "id":"U004",
+      "text":"This may indicate that the detail entered the tradition after the original event.",
+      "kind":"inference",
+      "evidence":[],
+      "basis_units":["U003"],
+      "reason":"This is a cautious inference from the recorded source pattern."
+    },
+    {
+      "id":"U005",
+      "text":"The later author must have invented it.",
+      "kind":"missing-bridge",
+      "evidence":[],
+      "basis_units":["U004"],
+      "reason":"The available chain does not establish authorship of the detail or deliberate invention."
+    }
+  ]
+}
