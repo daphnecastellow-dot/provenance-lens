@@ -5,6 +5,7 @@ on:
     paths:
       - "provenance_lens.py"
       - "pyproject.toml"
+      - "README.md"
       - "tests/**"
       - "examples/**"
       - ".github/workflows/provenance-lens-tests.yml"
@@ -12,6 +13,7 @@ on:
     paths:
       - "provenance_lens.py"
       - "pyproject.toml"
+      - "README.md"
       - "tests/**"
       - "examples/**"
       - ".github/workflows/provenance-lens-tests.yml"
